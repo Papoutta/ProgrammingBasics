@@ -1,18 +1,15 @@
-var height = 0; //initialised to 0
-
-var age = 0; //initialised to 0
-
-// Variable to determine if the person is allowed to ride the rollercoaster and initiate it to false
-
-var allowedToRide = false;
-
-// The person must be at least 42 inches tall AND over the age of 10 to ride the rollercoaster
-if (height >= 42 && age > 10) {
-    allowedToRide = true;
+function IsAllowedToRide(height, age) {if (height >= 42 && age >= 10) {
+    console.log("Is the person allowed to ride ? : Yes");
+    } 
+    else if ((height < 42 && age < 10 )||(height < 42 && age > 10 )||((height >= 42 && age < 10 ))) {
+        console.log("Is the person allowed to ride ? : No");
+    }
 } 
+IsAllowedToRide()
 
-else {
-    allowedToRide = false; 
+// simplified version of IsAllowedToRide
+function IsAllowedToRide(height, age) {
+    const isAllowed = height >= 42 && age >= 10;
+    console.log(`Is the person allowed to ride? : ${isAllowed ? "Yes" : "No"}`);
 }
-
-console.log("Is the person allowed to ride ? : " + allowedToRide);
+IsAllowedToRide()
